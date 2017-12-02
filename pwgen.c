@@ -1,4 +1,4 @@
-// PasswordGenerator.cpp : Defines the entry point for the console application.
+// pwgen.c : Defines the entry point for the console application.
 //
 
 #include "ctype.h"
