@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 	// Check command-line parameters
 	if (argc <= 1)
 	{
-		fprintf_s(stderr, "Usage: pwdgen.exe TEMPLATE LENGHT\r\n");
+		fprintf(stderr, "Usage: pwdgen.exe TEMPLATE LENGHT\r\n");
 		return EXIT_FAILURE;
 	}
 
@@ -44,25 +44,25 @@ int main(int argc, char **argv)
 		if (!hasLower && islower(argv[1][i]))
 		{
 			hasLower = true;
-			strcat_s(characters, 255, lowers);
+			strcat(characters, 255, lowers);
 		}
 
 		if (!hasUpper && isupper(argv[1][i]))
 		{
 			hasUpper = true;
-			strcat_s(characters, 255, uppers);
+			strcat(characters, 255, uppers);
 		}
 
 		if (!hasDigit && isdigit(argv[1][i]))
 		{
 			hasDigit = true;
-			strcat_s(characters, 255, digits);
+			strcat(characters, 255, digits);
 		}
 
 		if (!hasPunct && ispunct(argv[1][i]))
 		{
 			hasPunct = true;
-			strcat_s(characters, 255, puncts);
+			strcat(characters, 255, puncts);
 		}
 	}
 
@@ -72,10 +72,10 @@ int main(int argc, char **argv)
 	// Generate the password
 	for (i = 0; i < length; i++)
 	{
-		fprintf_s(stdout, "%c", characters[rand() % strlen(characters)]);
+		fprintf(stdout, "%c", characters[rand() % strlen(characters)]);
 	}
 
-	fprintf_s(stdout, "\n");
+	fprintf(stdout, "\n");
 
 	return EXIT_SUCCESS;
 }
