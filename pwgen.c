@@ -44,25 +44,25 @@ int main(int argc, char **argv)
 		if (!hasLower && islower(argv[1][i]))
 		{
 			hasLower = true;
-			strcat(characters, 255, lowers);
+			strcat(characters, lowers);
 		}
 
 		if (!hasUpper && isupper(argv[1][i]))
 		{
 			hasUpper = true;
-			strcat(characters, 255, uppers);
+			strcat(characters, uppers);
 		}
 
 		if (!hasDigit && isdigit(argv[1][i]))
 		{
 			hasDigit = true;
-			strcat(characters, 255, digits);
+			strcat(characters, digits);
 		}
 
 		if (!hasPunct && ispunct(argv[1][i]))
 		{
 			hasPunct = true;
-			strcat(characters, 255, puncts);
+			strcat(characters, puncts);
 		}
 	}
 
